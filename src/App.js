@@ -20,6 +20,16 @@ function App() {
     "Research",
     "Optimization",
   ];
+  const colors = [
+    { card: "bg-red-200", progress: "bg-red-400" },
+    { card: "bg-yellow-200", progress: "bg-yellow-400" },
+    { card: "bg-green-200", progress: "bg-green-400" },
+    { card: "bg-blue-200", progress: "bg-blue-400" },
+    { card: "bg-indigo-200", progress: "bg-indigo-400" },
+    { card: "bg-purple-200", progress: "bg-purple-400" },
+    { card: "bg-pink-200", progress: "bg-pink-400" },
+    { card: "bg-orange-200", progress: "bg-orange-400" },
+  ];
 
   const getCurrentDate = () => {
     const date = new Date();
@@ -43,6 +53,7 @@ function App() {
         subtitle: getRandomElement(subtitles),
         daysLeft: Math.floor(Math.random() * 10) + 1,
         progress: Math.floor(Math.random() * 100) + 1,
+        color: getRandomElement(colors),
       },
     };
     setCards([...cards, newCard]);
@@ -55,13 +66,16 @@ function App() {
   return (
     <div className="App">
       <div className="m-6">
-        <h2 className="text-2xl">
-          Projects{" "}
-          <button onClick={addCard}>
-            <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
-          </button>
+        <h2 className="text-2xl flex justify-between m-8">
+          <div>
+            Projects{" "}
+            <button onClick={addCard}>
+              <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+            </button>
+          </div>
+          <div>{getCurrentDate().dayMonth}</div>
         </h2>
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap m-auto w-[90%]">
           {cards.map((card) => {
             return (
               <Card

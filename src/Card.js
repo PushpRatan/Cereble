@@ -4,7 +4,9 @@ import ProgressBar from "./ProgressBar";
 const Card = ({ id, content, onRemove }) => {
   return (
     <div className="w-[200px] drop-shadow-lg">
-      <div className="w-full h-[200px] rounded-t-[40px] bg-orange-200 p-3 bg-opacity-75">
+      <div
+        className={`w-full h-[200px] rounded-t-[40px] ${content.color.card} p-3 bg-opacity-75`}
+      >
         <div className="flex p-2 justify-between mb-2">
           <div className="font-light">
             {content.dayMonth} <br /> <div>{content.year}</div>
@@ -18,10 +20,15 @@ const Card = ({ id, content, onRemove }) => {
             <span className="font-bold block">{content.title}</span>
             <span>{content.subtitle}</span>
           </p>
-          <ProgressBar progress={content.progress} />
+          <ProgressBar
+            progress={content.progress}
+            color={content.color.progress}
+          />
         </div>
       </div>
-      <div className="w-full h-[60px] rounded-b-[40px] mt-[2px] bg-orange-200 p-3 pb-5 bg-opacity-75">
+      <div
+        className={`w-full h-[60px] rounded-b-[40px] mt-[2px] ${content.color.card} p-3 pb-5 bg-opacity-75`}
+      >
         <div className="flex">
           <div>
             <span className="inline-block w-7 h-7 rounded-full bg-slate-600"></span>
