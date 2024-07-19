@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import ProgressBar from "./ProgressBar";
+// import ProgressBar from "./ProgressBar";
 import Card from "./Card";
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
     console.log(cards);
   };
 
-  const removeCard = (id) => {
-    setCards(cards.filter((card) => card.id !== id));
-  };
+  // const removeCard = (id) => {
+  //   setCards(cards.filter((card) => card.id !== id));
+  // };
   return (
     <div className="App">
       <div className="m-6">
