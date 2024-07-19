@@ -1,10 +1,5 @@
 # Getting Started with Create React App
-
-https://drive.google.com/file/d/1Sb2rCJ4dDdPE5cEPANe8Y_LqmHwJjPRs/view
-https://jamboard.google.com/d/1dNuFZrDqyWhBzxhjNyykWP2Vpz0n2GzPyC6SOAsRO24/viewer?pli=1&f=0
-https://cereble.com/
-https://fundook.io/
-+12064581765  
+ 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
