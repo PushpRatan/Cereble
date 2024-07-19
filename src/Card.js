@@ -1,22 +1,24 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
 
-const Card = () => {
+const Card = ({ id, content, onRemove }) => {
   return (
     <div className="w-[200px] drop-shadow-lg">
       <div className="w-full h-[200px] rounded-t-[40px] bg-orange-200 p-3 bg-opacity-75">
         <div className="flex p-2 justify-between mb-2">
           <div className="font-light">
-            December 10, <div>2020</div>
+            {content.dayMonth} <br /> <div>{content.year}</div>
           </div>
-          <div className="font-bold">X</div>
+          <button className="font-bold" onClick={() => onRemove(id)}>
+            X
+          </button>
         </div>
         <div className="m-auto w-[180px] mb-4">
           <p className="w-[160-px] m-auto text-center mb-2">
-            <span className="font-bold block">Web Designing</span>
-            <span>Prototyping</span>
+            <span className="font-bold block">{content.title}</span>
+            <span>{content.subtitle}</span>
           </p>
-          <ProgressBar />
+          <ProgressBar progress={content.progress} />
         </div>
       </div>
       <div className="w-full h-[60px] rounded-b-[40px] mt-[2px] bg-orange-200 p-3 pb-5 bg-opacity-75">
@@ -30,7 +32,7 @@ const Card = () => {
               +
             </span>
             <span className="inline-block w-[90px] h-7 p-1 bg-white text-center text-orange-400 font-bold text-sm rounded-xl">
-              2 Days Left
+              {content.daysLeft} Days Left
             </span>
           </div>
         </div>
