@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import ProgressBar from "./ProgressBar";
 import Card from "./Card";
-import { render } from "@testing-library/react";
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -51,7 +49,7 @@ function App() {
   };
 
   const removeCard = (id) => {
-    setCards(cards.filter((card) => card.id != id));
+    setCards(cards.filter((card) => card.id !== id));
   };
 
   return (
