@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="m-6">
+      <div className="p-2">
         <h2 className="text-2xl flex justify-between m-8">
           <div>
             Projects{" "}
@@ -75,7 +75,7 @@ function App() {
           </div>
           <div>{getCurrentDate().dayMonth}</div>
         </h2>
-        <div className="flex gap-4 flex-wrap m-auto w-[90%]">
+        <div className="flex gap-4 flex-wrap m-auto w-[95%] h-[550px] overflow-y-scroll rounded-3xl p-0 ">
           {cards.map((card) => {
             return (
               <Card
